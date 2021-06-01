@@ -10,6 +10,11 @@ node {
           stage('moving wat to webapps'){
              sh 'sudo cp -rf /var/lib/jenkins/workspace/sample-script/target/WebApp.war /opt/tomcat8/webapps/' 
           }
+          
+          stage('starting tomcat'){
+          sh '/opt/tomcat8/bin/shutdown.sh*'
+          }
+          
           stage('starting tomcat'){
           sh '/opt/tomcat8/bin/startup.sh*'
           }
