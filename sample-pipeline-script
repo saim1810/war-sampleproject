@@ -12,11 +12,11 @@ node {
           }
           
           stage('stoping tomcat'){
-          sh '/opt/tomcat8/bin/shutdown.sh*'
+          sh '/opt/tomcat8/bin/shutdown.sh'
           }
           
           stage('starting tomcat'){
-          sh '/opt/tomcat8/bin/startup.sh*'
+          sh '/opt/tomcat8/bin/startup.sh'
           }
      
      }
