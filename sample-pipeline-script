@@ -11,7 +11,7 @@ node {
              sh 'sudo cp -rf /var/lib/jenkins/workspace/sample-script/target/WebApp.war /opt/tomcat8/webapps/' 
           }
           stage('starting tomcat'){
-          sh 'sudo  sh startup.sh*'
+          sh '/opt/tomcat8/bin/startup.sh*'
           }
      
      }
